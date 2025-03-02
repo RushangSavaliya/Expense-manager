@@ -1,4 +1,5 @@
 @use '../../main-style.scss' as *;
+@use "sass:color";
 
 .top-bar{
     display: flex;
@@ -17,5 +18,46 @@
         font-weight: 700;
         text-transform: uppercase;
         color: $dark;
+    }
+}
+
+.total-expenses-section {
+    display: flex;
+    height: 250px;
+    background: $dark;
+
+    // Horizontaly and vertically centering the text
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-family: 'Lato';
+        font-weight: 300;
+        font-size: 50px;
+        color: white;
+
+        &.green{
+            color: color.adjust($green, $lightness: 10%);
+        }
+    
+        &.red{
+            color: color.adjust($red, $lightness: 10%);
+        }
+    }
+
+}
+
+.add-item-section {
+
+    display: flex;
+    // Horizontaly and vertically centering the text
+    justify-content: center;
+    align-items: center;
+
+    .add-item-container {
+        width: 800px;
+        height: 50px;
+        background: $red;
+        
     }
 }
